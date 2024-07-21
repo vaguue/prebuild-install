@@ -1,5 +1,5 @@
 {
-  "name": "prebuild-install",
+  "name": "@vaguue/prebuild-install",
   "version": "7.1.2",
   "description": "A command line tool to easily install prebuilt binaries for multiple version of node/iojs on a specific platform",
   "scripts": {
@@ -41,7 +41,9 @@
     "tape": "^5.3.1",
     "tempy": "0.2.1"
   },
-  "bin": "./bin.js",
+  "bin": {
+    "prebuild-install": "./bin.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/prebuild/prebuild-install.git"

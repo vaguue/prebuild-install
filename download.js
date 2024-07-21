@@ -108,15 +108,6 @@ function downloadPrebuild (downloadUrl, opts, cb) {
             return cb(err)
           }
           log.info('unpack', 'resolved to ' + resolved)
-
-          if (opts.runtime === 'node' && opts.platform === process.platform && opts.abi === process.versions.modules && opts.arch === process.arch) {
-            try {
-              require(resolved)
-            } catch (err) {
-              return cb(err)
-            }
-            log.info('unpack', 'required ' + resolved + ' successfully')
-          }
         }
 
         cb(null, resolved)
